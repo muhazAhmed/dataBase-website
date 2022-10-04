@@ -1,6 +1,6 @@
 # dataBase-website
 
-Here i have created a website using HTML, CSS, NodeJS, Express and MongoDB.
+Here i have created a website using hbs, CSS, NodeJS, Express and MongoDB.
 
 1) Created a SignIn/SignUp page
 2) Designed the page
