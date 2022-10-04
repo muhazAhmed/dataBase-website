@@ -13,12 +13,13 @@
 .box{
     width: 400px;
     position: absolute ;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 50px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
+    box-shadow: 25px 25px;
 }
 
 .box h1{
@@ -75,5 +76,8 @@
     font-size: 16px;
 }
 span{
+    color: #03a9f4;
+}
+.b2{
     color: #03a9f4;
 }
