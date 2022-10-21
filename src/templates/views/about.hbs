@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/about.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:itel,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300,;1,400;1,500;1,600;1,700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/22c0360cfd.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>project/DB</title>
 </head>
+
 <body>
     {{>navbar}}
-    <h1>This is About page</h1>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="service">
+                <i class="fa-solid fa-link"></i>
+                <h2>NO ADS!</h2>
+                <p>This website is a total ad free.<br>
+                    This helps you to have a great experience, without any interruption </p>
+            </div>
+            <div class="service">
+                <i class="fa-brands fa-cloudsmith"></i>
+                <h2>How it works</h2>
+                <p>We are using AWS for gentrating URL<br>
+                    When the image is uploaded, it will be stored in our database, where you can acces the url</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-droplet"></i>
+                <h2>UI</h2>
+                <p>The design is of this website is so minimal that, it easy to use and beautiful</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-user-shield"></i>
+                <h2>Saftey</h2>
+                <p>The data we are storing is for security purpose, and rest assure that, it is safe and protected
+                    with the best database encryption</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-bolt"></i>
+                <h2>Speed</h2>
+                <p>The gentrated URL performance acts same as the original without any delay</p>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <h2>Cost</h2>
+                <p>Yes!!, its Free.<br>
+                    We dont charge a single penny for this feature</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

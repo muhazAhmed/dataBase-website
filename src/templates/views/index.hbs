@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
@@ -10,10 +11,36 @@
     <link rel="stylesheet" href="css/home.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>project/DB</title>
 </head>
+
 <body>
-    {{>navbar}}
-    <h1>Welcome</h1>
+    <div class="bg" background-image: url("https://img.freepik.com/premium-vector/abstract-background-with-waves_481527-76.jpg");>
+    <div class="banner">
+        {{>navbar}}
+        <div class="content">
+            <h1>Welcome</h1>
+            <p>Gentrating URL for an image is easy as never before. All it takes is just few clicks</p>
+            <form action="main">
+                <div class="button">
+                    <input type="submit" name="" value="Basic">
+            </form>
+            <form action="register">
+                <div class="button">
+                    <input type="submit" name="" value="Secured">
+                </div>
+            </form>
+            <p>Basic : No need to create account<br>
+                URL: http less secured
+            </p>
+
+            <p>Secured : Need to create account<br>
+                URL: https secured
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
+
 </html>

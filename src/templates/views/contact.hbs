@@ -11,7 +11,7 @@
         rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>project/DB</title>
 </head>
 
 <body>
@@ -22,30 +22,31 @@
         <div class="contact-box">
             <div class="contact-left">
                 <h3>Send your request</h3>
-                <form action="" method="">
+                <form id="submit-form" action="" >
                     <div class="input-row">
                         <div class="input-group">
                             <label>Name</label>
-                            <input type="text" placeholder="Enter your name">
+                            <input type="text">
                         </div>
                         <div class="input-group">
                             <label>Phone</label>
-                            <input type="number" placeholder="Enter your number">
+                            <input type="number">
                         </div>
-                        
                     </div>
                     <div class="input-row">
                         <div class="input-group">
                             <label>Email</label>
-                            <input type="email" placeholder="Enter your email">
+                            <input type="email">
                         </div>
                         <div class="input-group">
                             <label>Subject</label>
-                            <input type="text" placeholder="Subject">
-                        </div> 
+                            <input type="text">
+                        </div>
                     </div>
-                    <label>Message</label>
-                    <textarea rows="5" placeholder="Your message"></textarea>
+                    <div class="msg">
+                        <label>Message</label>
+                        <textarea rows="5"></textarea>
+                    </div>
                     <button type="submit">Send</button>
                 </form>
             </div>
@@ -68,6 +69,25 @@
             </div>
         </div>
     </div>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbz-8k399UCH2TxQls_RTA0SYcc4PWnbwIou2t63C-1q6fkQnspTpPAq4D7xg12Zbtud/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

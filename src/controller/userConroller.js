@@ -39,7 +39,7 @@ const createUser = async function (req, res) {
         .send({ status: false, message: "required last name" });
     }
 
-    if (!/^[a-zA-Z ]{3,}$/.test(lastname))
+    if (!/^[a-zA-Z ]{1,}$/.test(lastname))
       return res
         .status(400)
         .send({ status: false, message: "Only alphabets in name!!" });
@@ -80,7 +80,7 @@ const createUser = async function (req, res) {
     let newData = { firstname, lastname, email, password, confirmpassword };
     await registerModel.create(newData);
 
-    return res.status(201).render("login");
+    return res.status(201).render("main");
   } catch (err) {
     return res
       .status(500)
@@ -94,14 +94,14 @@ const loginUser = async function (req, res) {
   try {
     const email = req.body.email;
     const password = req.body.password;
-
-    const User = registerModel.findOne({ email });
-    if(email === User){
-        console.log(email);
-    }
     
-    if ( password === User) {
-      return res.status(201).render("index");
+    const User = await registerModel.findOne({ email });
+    console.log(User);
+    if(User == null)
+    return res.send("email or password is wrong");
+
+    if (password === User.password) {
+      return res.status(201).render("main");
     } else {
       return res.send("email or password is wrong");
     }

@@ -21,7 +21,7 @@ const registerSchema = new mongoose.Schema({
   confirmpassword: {
     type: String,
     required: true,
-  }
+  },
 });
 
 module.exports = mongoose.model("Register", registerSchema);
